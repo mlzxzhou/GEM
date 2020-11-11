@@ -1,10 +1,12 @@
 # GEM-Demo
 
+This is a demo to reproduce the ‘Answer-rate Prediction’ application in Section 4.1 of paper 'Graph-Based Equilibrium Metrics for Dynamic Supply-Demand Systems with Applications to Ride-sourcing Platforms'. Note that since all the demand and supply data is simulated, the prediction results obtained by running this demo may not be exactly the same with those reported in the paper. In this demo, we skip the data processing part to avoid disclosing the pattern of the raw data. All the required files to run the simulation including codes, simulated data, some tool boxes, and a guidance document ‘README.txt’, are all provided in the folder ‘demo’. 
+
 ### System requirement
 
-Programming language: Python 3
+* Programming language: Python 3
     
-Python Packages: cvxpy 1.1.5, numpy, scipy, pandas, sklearn
+* Python Packages: cvxpy 1.1.5, numpy, scipy, pandas, sklearn
 
 
 ### Preprocess data
