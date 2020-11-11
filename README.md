@@ -1,17 +1,11 @@
 # GEM-Demo
 
-## System requirement
+### System requirement
 
-### Programming language
+Programming language: Python 3
     
-Python 3
-    
-### Python Packages
+Python Packages: cvxpy 1.1.5, numpy, scipy, pandas, sklearn
 
-cvxpy 1.1.5, numpy, scipy, pandas, sklearn
-
-
-## Usage
 
 ### Preprocess data
 
