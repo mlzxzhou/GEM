@@ -29,11 +29,11 @@
 
 
 ### Testing and prediction
-    To generate dependent and independent variables for training and testing
+    - To generate dependent and independent variables for training and testing
     * python functional_prepare.py
     * Result in ../data/prediction/area5/
     
-    To test the prediction effects of GEM, Hellinger Distance, L2 Distance and Wasserstein Distance
+    - To test the prediction effects of GEM, Hellinger Distance, L2 Distance and Wasserstein Distance
     * nohup R CMD BATCH model_t+1.R &
     * nohup R CMD BATCH model_t+6.R &
 
