@@ -148,7 +148,7 @@ for i in range(21):
     ratio = metric_data['ratio'].T
     global_metric = metric_data['global_metric']
 
-    metric_w_dir = 'data/output/area5/area5_' + str(basetime) + '_metric1.npz'
+    metric_w_dir = 'data/output/area5/area5_' + str(basetime) + '_metric_1.npz'
     metric_w_data = np.load(metric_w_dir)
     global_metric_w = metric_w_data['global_metric_w']
 
@@ -205,7 +205,7 @@ for i in range(3600):
         x_2[i, (4 - j), :] = metric[(864 + i - 144 * (j + 1)), :]
 
 data = np.column_stack([y, x_1[:, :, 1], x_2[:, :, 0], x_1[:, :, 1], x_2[:, :, 1], x_1[:, :, 2], x_2[:, :, 2], x_1[:, :, 3], x_2[:, :, 3]])
-np.save('../data/prediction/area5/t_6/data.npy', data)
+np.save('data/prediction/area5/t_6/data.npy', data)
 
 
 
