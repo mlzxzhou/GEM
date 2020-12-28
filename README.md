@@ -11,19 +11,19 @@ This is a demo to reproduce the ‘Answer-rate Prediction’ application in Sect
 
 ### Preprocess data
 
-Generate ratio and global_metric from April 21 to April 30. Result in demo/data/output/area5/
+Generate ratio and global_metric from April 21 to April 30. Result in data/output/area5/
 ```
 sh run0.sh
 ```
 
-Generate ratio and global_metric from May 1st to May 21st. Result in demo/data/output/area5/
+Generate ratio and global_metric from May 1st to May 21st. Result in data/output/area5/
 ```
 sh run1.sh
 ```
 
 ### Testing and prediction
 
-Generate dependent and independent variables for training and testing. Result in demo/data/prediction/area5/
+Generate dependent and independent variables for training and testing. Result in data/prediction/area5/
 ```
 python functional_prepare.py
 ```
