@@ -45,7 +45,7 @@ Generate ratio and global_metric from May 1st to May 21st in Application 1 and f
 sh run1.sh
 ```
 
-### Testing and prediction
+### Testing and prediction in Application 1
 
 Generate dependent and independent variables for training and testing. Result in data/prediction/area5/
 ```
@@ -58,7 +58,7 @@ nohup R CMD BATCH model_t+1.R &
 nohup R CMD BATCH model_t+6.R &
 ```
 
-### AB test
+### AB test in Application 3
 
 Generate input for AB test. Result in data/ab_test/area5/
 ```
