@@ -15,7 +15,7 @@ The required data can be obtained from the following website after sigining in:
 https://outreach.didichuxing.com/appEn-vue/DatasetProjectDetail?id=1026
 ```
 
-The demand and supply data, named as 'area5_xxxx_order'.npz and 'area5_xxxx_driver.npz' can be found in the folder 'driver_count' and 'order_count', where the number 'xxxx' represents the date.  
+The demand and supply data, named as 'area5_xxxx_order'.npz and 'area5_xxxx_driver.npz' can be found in the folder 'area_driver' and 'area_order', where the number 'xxxx' represents the date.  
 
 Put all the supply-demand data from 20180421 to 20180521 in the path
 ```
@@ -38,11 +38,20 @@ Application3/
 
 ### Compute GEM
 
-Compute supply-demand ratio and global_metric from April 21 to April 30 for Application 1 and from Nov 12 to Nov 25 for Application 3. Result in data/output/area5/
+Compute supply-demand ratio and global_metric from 20180421 to 20180430 for Application 1 and from 20181112 to 20181125 for Application 3. 
 ```
+# Application1
+cd Application1/
+sh run0.sh
+
+# Application3
+cd Application3/
 sh run0.sh
 ```
-
+Result in the path
+```
+data/output/area5/
+```
 Generate ratio and global_metric from May 1st to May 21st in Application 1 and from Dec 3 to Dec 17 in Application 3 . Result in data/output/area5/
 ```
 sh run1.sh
