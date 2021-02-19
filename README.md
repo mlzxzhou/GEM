@@ -15,7 +15,7 @@ The required data can be obtained from the following website after sigining in:
 https://outreach.didichuxing.com/appEn-vue/DatasetProjectDetail?id=1026
 ```
 
-The demand and supply data, named as 'area5_xxxx_order'.npz and 'area5_xxxx_driver.npz' can be found in the folder 'driver_count' and 'order_count', where the number xxxx represents the date.  
+The demand and supply data, named as 'area5_xxxx_order'.npz and 'area5_xxxx_driver.npz' can be found in the folder 'driver_count' and 'order_count', where the number 'xxxx' represents the date.  
 
 Put all the supply-demand data from 20180421 to 20180521 in the path
 ```
