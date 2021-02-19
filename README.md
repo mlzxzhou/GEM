@@ -1,6 +1,6 @@
-# Graph-Based Equilibrium Metrics for Dynamic Supply-Demand Systems with Applications to Ride-sourcing Platforms
+# GEM
 
-This is a demo to reproduce the ‘Answer-rate Prediction’ application in Section 4.1 and Section 4.3 of paper '**Graph-Based Equilibrium Metrics for Dynamic Supply-Demand Systems with Applications to Ride-sourcing Platforms**'. In this repository, we skip the data processing part to avoid disclosing the pattern of the raw data. All the required files to run the simulation including codes, simulated data, some tool boxes, and a guidance document ‘README.txt’, are all provided in the folder ‘application1’ and ‘application3’. 
+This is an implementation of the ‘Order Answer-rate Prediction’ application in Section 4.1 and the 'Policy Evaluation' application in Section 4.3 of paper '**Graph-Based Equilibrium Metrics for Dynamic Supply-Demand Systems with Applications to Ride-sourcing Platforms**'. In this repository, we skip the data processing part to avoid disclosing the raw data. All the required codes to reproduce the main results of the two applications in the paper, and a guidance document ‘README.txt’, are provided. 
 
 ### System requirement
 
