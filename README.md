@@ -2,40 +2,43 @@
 
 This is an implementation of the ‘Order Answer-rate Prediction’ application in Section 4.1 and the 'Policy Evaluation' application in Section 4.3 of paper '**Graph-Based Equilibrium Metrics for Dynamic Supply-Demand Systems with Applications to Ride-sourcing Platforms**'. In this repository, we skip the data processing part to avoid disclosing the raw data. All the required codes to reproduce the main results of the two applications in the paper, and a guidance document ‘README.txt’, are provided. 
 
-### System requirement
+### Requirement
 
-* Programming language: Python 3
+* Python 3
     
 * Python Packages: cvxpy 1.1.5, numpy, scipy, pandas, sklearn
 
-### dataset
+### Dataset
 
-All data can be obtained from the following website:
+The required data can be obtained from the following website after sigining in:
 ```
-https://outreach.didichuxing.com/app-vue/DatasetProjectDetail?id=1025
+https://outreach.didichuxing.com/appEn-vue/DatasetProjectDetail?id=1026
 ```
-The data in AA_AB_test can be placed directly under the Application3 folder.
 
-The files in area_driver and area_order need to be divided by time.
+The demand and supply data, named as 'area5_{}_order.npz' and 'area5_{}_driver.npz' can be found in the folder 'driver_count' and 'order_count', where the number inside the '{}' represents the date.  
 
-Place the data from April to May 2018 in
+Put all the supply-demand data from 20180421 to 20180521 in the path
 ```
 Application1/data/processed/area5/
 ```
-Place the data from November to December 2018 in
+Put all the supply-demand data from 20181112 to 20181216 in the path
 ```
 Application3/data/processed/area5/
 ```
-The grids_to_id.pickle in grids needs to be copied to the location of the above two folders.
+The file 'grids_to_id.pickle' in the folder 'grids' needs to be copied to the above two paths.
 
-data_cost_lambda_eq1.csv in grids needs to be placed in the 
+File 'data_cost_lambda_eq1.csv' needs to be placed in the path
 ```
 Application3/data/ab_test/area5/
 ```
+All files in the folder 'AA_AB_test' should be placed in the path 
+```
+Application3/
+``
 
-### Preprocess data
+### Compute GEM
 
-Generate ratio and global_metric from April 21 to April 30 in Application 1 and from Nov 12 to Nov 25 in Application 3. Result in data/output/area5/
+Compute supply-demand ratio and global_metric from April 21 to April 30 for Application 1 and from Nov 12 to Nov 25 for Application 3. Result in data/output/area5/
 ```
 sh run0.sh
 ```
