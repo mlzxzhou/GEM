@@ -1,6 +1,6 @@
 #!/bin/bash
 sdate=20180421
-edate=20180430
+edate=20180431
 
 cdate=$sdate
 while [ "$cdate" != "$edate" ];
