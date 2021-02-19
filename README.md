@@ -1,5 +1,5 @@
 # GEM
-`a`
+
 This is an implementation of the ‘Order Answer-rate Prediction’ application in Section 4.1 and the 'Policy Evaluation' application in Section 4.3 of paper '**Graph-Based Equilibrium Metrics for Dynamic Supply-Demand Systems with Applications to Ride-sourcing Platforms**'. In this repository, we skip the data processing part to avoid disclosing the raw data. All the required codes to reproduce the main results of the two applications in the paper, and a guidance document ‘README.md’, are provided. 
 
 ### Requirement
@@ -49,10 +49,14 @@ sh run0.sh
 sh run1.sh
 ```
 After compute, you will find:
-    - 'area5_xxxx_metric.npz', where the number 'xxxx' represents the date.  This file
+    - 'area5_xxxx_metric.npz'    calculated by GEM, include `ratio` and `global_metric`.
+    - 'area5_xxxx_metric_1.npz'  calculated by Wasserstein Distance, include `ratio` and `global_metric_w`.
+
+where the number 'xxxx' represents the date. These files are saved under
 ```
 Application1/data/output/area5/
 ```
+
 Compute supply-demand ratio and global_metric from 20181112 to 20181216 for Application 3.
 ```
 cd Application3/
@@ -64,7 +68,10 @@ sh run0.sh
 sh run1.sh
 ```
 
-Result in the path
+After compute, you will find:
+    - 'area5_xxxx_metric.npz'    calculated by GEM, include `ratio` and `global_metric`.
+
+where the number 'xxxx' represents the date. These files are saved under
 ```
 Application3/data/output/area5/
 ```
