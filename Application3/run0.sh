@@ -1,8 +1,6 @@
 #!/bin/bash
 sdate=20181112
 edate=20181126
-#sdate=20181203
-#edate=20181217
 
 cdate=$sdate
 while [ "$cdate" != "$edate" ];
