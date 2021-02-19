@@ -38,47 +38,73 @@ Application3/
 
 ### Compute GEM
 
-Compute supply-demand ratio and global_metric from 20180421 to 20180430 for Application 1 and from 20181112 to 20181125 for Application 3. 
+Compute supply-demand ratio and global_metric from 20180421 to 20180521 for Application 1. 
 ```
-# Application1
 cd Application1/
+
+# from 20180421 to 20180430
 sh run0.sh
 
-# Application3
-cd Application3/
-sh run0.sh
+# from 20180501 to 20180521
+sh run1.sh
 ```
 Result in the path
 ```
-data/output/area5/
+Application1/data/output/area5/
 ```
-Generate ratio and global_metric from May 1st to May 21st in Application 1 and from Dec 3 to Dec 17 in Application 3 . Result in data/output/area5/
+Compute supply-demand ratio and global_metric from 20181112 to 20181216 for Application 3.
 ```
+cd Application3/
+
+# from 20181112 to 20181125
+sh run0.sh
+
+# from 20181203 to 20181216
 sh run1.sh
 ```
 
-### Testing and prediction in Application 1
-
-Generate dependent and independent variables for training and testing. Result in data/prediction/area5/
+Result in the path
 ```
+Application3/data/output/area5/
+```
+
+### Application 1：Order Answer-rate Prediction
+
+compute dependent and independent variables for prediction. 
+```
+cd Application1/
+
 python functional_prepare.py
+```
+Result in the path
+```
+Application1/data/prediction/area5/
 ```
   
 Test the prediction effects of GEM, Hellinger Distance, L2 Distance and Wasserstein Distance
 ```
+cd Application1/
+
 nohup R CMD BATCH model_t+1.R &
 nohup R CMD BATCH model_t+6.R &
 ```
 
-### AB test in Application 3
+### Application 3:Policy Evaluation
 
-Generate input for AB test. Result in data/ab_test/area5/
+compute inputs for policy evaluation. 
 ```
+cd Application3/
+
 python cal_out.py
 ```
-
-AA/AB test
+Result in the path
 ```
+Application3/data/ab_test/area5/
+```
+examine the marginal effect of policy on GEM
+```
+cd Application3/
+
 python AB_test.py
 ```
 
