@@ -49,8 +49,9 @@ sh run0.sh
 sh run1.sh
 ```
 After compute, you will find:
-    - 'area5_xxxx_metric.npz'    calculated by GEM, include `ratio` and `global_metric`.
-    - 'area5_xxxx_metric_1.npz'  calculated by Wasserstein Distance, include `ratio` and `global_metric_w`.
+
+- 'area5_xxxx_metric.npz'    calculated by GEM, include `ratio` and `global_metric`.
+- 'area5_xxxx_metric_1.npz'  calculated by Wasserstein Distance, include `ratio` and `global_metric_w`.
 
 where the number 'xxxx' represents the date. These files are saved under
 ```
@@ -69,7 +70,8 @@ sh run1.sh
 ```
 
 After compute, you will find:
-    - 'area5_xxxx_metric.npz'    calculated by GEM, include `ratio` and `global_metric`.
+
+- 'area5_xxxx_metric.npz'    calculated by GEM, include `ratio` and `global_metric`.
 
 where the number 'xxxx' represents the date. These files are saved under
 ```
