@@ -204,7 +204,7 @@ for i in range(3600):
     for j in range(5):
         x_2[i, (4 - j), :] = metric[(864 + i - 144 * (j + 1)), :]
 
-data = np.column_stack([y, x_1[:, :, 1], x_2[:, :, 0], x_1[:, :, 1], x_2[:, :, 1], x_1[:, :, 2], x_2[:, :, 2], x_1[:, :, 3], x_2[:, :, 3]])
+data = np.column_stack([y, x_1[:, :, 0], x_2[:, :, 0], x_1[:, :, 1], x_2[:, :, 1], x_1[:, :, 2], x_2[:, :, 2], x_1[:, :, 3], x_2[:, :, 3]])
 np.save('../data/prediction/area5/t_6/data.npy', data)
 
 
