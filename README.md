@@ -48,7 +48,8 @@ sh run0.sh
 # from 20180501 to 20180521
 sh run1.sh
 ```
-Result in the path
+After compute, you will find:
+    - 'area5_xxxx_metric.npz', where the number 'xxxx' represents the date.  This file
 ```
 Application1/data/output/area5/
 ```
