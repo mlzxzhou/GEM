@@ -50,8 +50,8 @@ sh run1.sh
 ```
 After compute, you will find:
 
-- 'area5_xxxx_metric.npz'         &nbsp calculated by GEM, include `ratio` and `global_metric`.
-- 'area5_xxxx_metric_1.npz'       &nbsp calculated by Wasserstein Distance, include `ratio` and `global_metric_w`.
+- 'area5_xxxx_metric.npz'         : calculated by GEM, include `ratio` and `global_metric`.
+- 'area5_xxxx_metric_1.npz'       : calculated by Wasserstein Distance, include `ratio` and `global_metric_w`.
 
 where the number 'xxxx' represents the date. These files are saved under
 ```
@@ -71,7 +71,7 @@ sh run1.sh
 
 After compute, you will find:
 
-- 'area5_xxxx_metric.npz'    calculated by GEM, include `ratio` and `global_metric`.
+- 'area5_xxxx_metric.npz'    : calculated by GEM, include `ratio` and `global_metric`.
 
 where the number 'xxxx' represents the date. These files are saved under
 ```
@@ -107,7 +107,7 @@ nohup R CMD BATCH model_t+1.R &
 nohup R CMD BATCH model_t+6.R &
 ```
 
-### Application 3:Policy Evaluation
+### Application 3: Policy Evaluation
 
 Integrate data in'area5_xxxx_order.npz','area5_xxxx_driver.npz', area5_xxxx_metric.npz' of different dates, where the number 'xxxx' represents the date.  
 ```
@@ -117,8 +117,8 @@ python cal_out.py
 ```
 After integrate, you will find:
 
-- 'out0_new.npy'    from 20181112 to 20181125
-- 'out1_new.npy'    from 20181203 to 20181216
+- 'out0_new.npy'    : from 20181112 to 20181125
+- 'out1_new.npy'    : from 20181203 to 20181216
 
 These files are saved under
 
