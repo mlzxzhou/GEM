@@ -80,20 +80,26 @@ Application3/data/output/area5/
 
 ### Application 1：Order Answer-rate Prediction
 
-compute dependent and independent variables for examine whether the  the GEM-related measures are useful for predicting `ratio`. 
-`response` which represents real order answer rate is the dependent variable. 
-`metric` is calculated by four methods: Hellinger distance, L2 distance, the Wasserstein distance, and GEM, including  10 minutes before (or 60 minutes before), of the current date and the previous five days,
+compute dependent and independent variables for examine whether the  the GEM-related measures are useful for predicting order answer rate `ratio`. 
+
+```
 cd Application1/
 
 python functional_prepare.py
 ```
+
+`response` which represents real order answer rate is the dependent variable， located in the first column of data.npy.
+
+`x_1` and `x_2` are dependent variables，`x_1` is the `metric` calculated by the four methods of Hellinger distance, L2 distance, the Wasserstein distance, and GEM, across 10 consecutive 10(or 60) minutes interval before, `x_2` is the `metric` at the same time point in the previous 5 days.
+
+Therefore, there are a total of 60 (4*(10+5)) independent variables that need to be used
+
 Result `data.npy` is in the path
 ```
 Application1/data/prediction/area5/
 ```
-which 
 
-Test the prediction effects of GEM, Hellinger Distance, L2 Distance and Wasserstein Distance
+Finally test the prediction effects of GEM, Hellinger Distance, L2 Distance and Wasserstein Distance
 ```
 cd Application1/
 
