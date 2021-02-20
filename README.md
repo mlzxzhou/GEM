@@ -90,9 +90,9 @@ python functional_prepare.py
 
 `response` which represents real order answer rate is the dependent variable， located in the first column of data.npy.
 
-`x_1` and `x_2` are dependent variables，`x_1` is the `metric` calculated by the four methods of Hellinger distance, L2 distance, the Wasserstein distance, and GEM, across 10 consecutive 10(or 60) minutes interval before, `x_2` is the `metric` at the same time point in the previous 5 days.
+`x_1` and `x_2` are dependent variables，`x_1` is the `metric` calculated by the four methods of Hellinger distance, L2 distance, the Wasserstein distance, and GEM, across 10 consecutive 10(or 60) minutes interval before `response` time, `x_2` is the `metric` at the same time interval of the day in the previous 5 days.
 
-Therefore, there are a total of 60 (4*(10+5)) independent variables that need to be used
+Therefore, there are a total of 60 (4*(10+5)) independent variables that need to be used.
 
 Result `data.npy` is in the path
 ```
@@ -109,17 +109,26 @@ nohup R CMD BATCH model_t+6.R &
 
 ### Application 3:Policy Evaluation
 
-compute inputs for policy evaluation. 
+Integrate data in'area5_xxxx_order.npz','area5_xxxx_driver.npz', area5_xxxx_metric.npz' of different dates, where the number 'xxxx' represents the date.  
 ```
 cd Application3/
 
 python cal_out.py
 ```
-Result in the path
+After integrate, you will find:
+
+- 'out0_new.npy'    from 20181112 to 20181125
+- 'out1_new.npy'    from 20181203 to 20181216
+
+These files are saved under
+
 ```
 Application3/data/ab_test/area5/
 ```
-examine the marginal effect of policy on GEM
+
+Finally, examine whether GEM can sufficiently quantify the supply-demand relationship and subsequently affect the examined platform indexes by regression model. 
+
+At the same time, a comparison between AA test and AB test was conducted using including the order answer rate, order finishing rate to verify the conclusion of the effectiveness of GEM.
 ```
 cd Application3/
 
