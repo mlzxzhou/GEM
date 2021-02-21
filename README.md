@@ -1,6 +1,6 @@
 # GEM
 
-This is an implementation of the ‘Order Answer-rate Prediction’ application in Section 4.1 and the 'Policy Evaluation' application in Section 4.3 of paper '**Graph-Based Equilibrium Metrics for Dynamic Supply-Demand Systems with Applications to Ride-sourcing Platforms**'. All the required codes to reproduce the main results of the two applications in the paper are provided. In this repository, we do not share the raw data while some processed data can be obtained from the DiDi Gaia Open Data Initiative. 
+This is an implementation of the ‘Order Answer-rate Prediction’ application in Section 4.1 and the 'Policy Evaluation' application in Section 4.3 of paper '**Graph-Based Equilibrium Metrics for Dynamic Supply-Demand Systems with Applications to Ride-sourcing Platforms**'. All the required codes to reproduce the main results of the two applications in the paper are provided. In this repository, we do not share the raw data while some processed data can be obtained by submitting an application to DiDi Gaia Open Data Initiative. 
 
 ### Requirement
 
