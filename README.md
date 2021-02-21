@@ -38,7 +38,7 @@ Application3/
 
 ### Compute GEM
 
-Compute supply-demand ratio and GEM from 20180421 to 20180521 for Application 1. 
+Compute supply-demand ratio and GEM from 20180421 to 20180521 for Application 1, from 20181112 to 20181216 for Application 3.
 ```
 cd Application1/
 
@@ -47,19 +47,7 @@ sh run0.sh
 
 # from 20180501 to 20180521
 sh run1.sh
-```
-When the above jobs are done, you can find the outputs,
 
-- 'area5_xxxx_metric.npz'         : calculated by GEM, include `ratio` and `global_metric`.
-- 'area5_xxxx_metric_1.npz'       : calculated by Wasserstein Distance, include `ratio` and `global_metric_w`.
-
-where the number 'xxxx' represents the date, under the path 
-```
-Application1/data/output/area5/
-```
-
-Compute supply-demand ratio and GEM from 20181112 to 20181216 for Application 3.
-```
 cd Application3/
 
 # from 20181112 to 20181125
@@ -71,9 +59,14 @@ sh run1.sh
 
 When the above jobs are done, you can find the outputs,
 
-- 'area5_xxxx_metric.npz'    : calculated by GEM, include `ratio` and `global_metric`.
+- 'area5_xxxx_metric.npz'         : calculated by GEM, include `ratio` and `global_metric`.
+- 'area5_xxxx_metric_1.npz'       : calculated by Wasserstein Distance, include `ratio` and `global_metric_w`.
 
-where the number 'xxxx' represents the date, under the path
+where the number 'xxxx' represents the date, under the path 
+```
+Application1/data/output/area5/
+```
+and
 ```
 Application3/data/output/area5/
 ```
@@ -93,8 +86,6 @@ Application1/data/prediction/area5/
 
 To get the prediction results for GEM, Hellinger Distance, L2 Distance and Wasserstein Distance
 ```
-cd Application1/
-
 nohup R CMD BATCH model_t+1.R &
 nohup R CMD BATCH model_t+6.R &
 ```
@@ -106,23 +97,6 @@ Integrate data in'area5_xxxx_order.npz','area5_xxxx_driver.npz', area5_xxxx_metr
 cd Application3/
 
 python cal_out.py
-```
-After integrate, you will find:
-
-- 'out0_new.npy'    : from 20181112 to 20181125
-- 'out1_new.npy'    : from 20181203 to 20181216
-
-These files are saved under
-
-```
-Application3/data/ab_test/area5/
-```
-
-Finally, examine whether GEM can sufficiently quantify the supply-demand relationship and subsequently affect the examined platform indexes by regression model. 
-
-At the same time, a comparison between AA test and AB test was conducted using including the order answer rate, order finishing rate to verify the conclusion of the effectiveness of GEM.
-```
-cd Application3/
 
 python AB_test.py
 ```
