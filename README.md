@@ -3,10 +3,10 @@
 This is an implementation of the ‘Order Answer-rate Prediction’ application in Section 4.1 and the 'Policy Evaluation' application in Section 4.3 of paper '**Graph-Based Equilibrium Metrics for Dynamic Supply-Demand Systems with Applications to Ride-sourcing Platforms**'. All the required codes to reproduce the main results of the two applications in the paper are provided. In this repository, we do not share the raw data while some processed data can be obtained by submitting an application to DiDi Gaia Open Data Initiative. 
 
 ### Requirement
-
-* Python 3
     
 * Python Packages: cvxpy 1.1.5, numpy, scipy, pandas, sklearn
+
+* Optimization Package: GLPK
 
 ### Dataset
 
@@ -38,7 +38,7 @@ Application3/
 
 ### Compute GEM
 
-Compute supply-demand ratio and global_metric from 20180421 to 20180521 for Application 1. 
+Compute supply-demand ratio and GEM from 20180421 to 20180521 for Application 1. 
 ```
 cd Application1/
 
@@ -48,17 +48,17 @@ sh run0.sh
 # from 20180501 to 20180521
 sh run1.sh
 ```
-After compute, you will find:
+When the above jobs are done, you can find the outputs,
 
 - 'area5_xxxx_metric.npz'         : calculated by GEM, include `ratio` and `global_metric`.
 - 'area5_xxxx_metric_1.npz'       : calculated by Wasserstein Distance, include `ratio` and `global_metric_w`.
 
-where the number 'xxxx' represents the date. These files are saved under
+where the number 'xxxx' represents the date, under the path 
 ```
 Application1/data/output/area5/
 ```
 
-Compute supply-demand ratio and global_metric from 20181112 to 20181216 for Application 3.
+Compute supply-demand ratio and GEM from 20181112 to 20181216 for Application 3.
 ```
 cd Application3/
 
@@ -69,18 +69,16 @@ sh run0.sh
 sh run1.sh
 ```
 
-After compute, you will find:
+When the above jobs are done, you can find the outputs,
 
 - 'area5_xxxx_metric.npz'    : calculated by GEM, include `ratio` and `global_metric`.
 
-where the number 'xxxx' represents the date. These files are saved under
+where the number 'xxxx' represents the date, under the path
 ```
 Application3/data/output/area5/
 ```
 
 ### Application 1：Order Answer-rate Prediction
-
-compute dependent and independent variables for examine whether the  the GEM-related measures are useful for predicting order answer rate `ratio`. 
 
 ```
 cd Application1/
@@ -88,18 +86,12 @@ cd Application1/
 python functional_prepare.py
 ```
 
-`response` which represents real order answer rate is the dependent variable， located in the first column of data.npy.
-
-`x_1` and `x_2` are dependent variables，`x_1` is the `metric` calculated by the four methods of Hellinger distance, L2 distance, the Wasserstein distance, and GEM, across 10 consecutive 10(or 60) minutes interval before `response` time, `x_2` is the `metric` at the same time interval of the day in the previous 5 days.
-
-Therefore, there are a total of 60 (4*(10+5)) independent variables that need to be used.
-
-Result `data.npy` is in the path
+Output `data.npy` in the path
 ```
 Application1/data/prediction/area5/
 ```
 
-Finally test the prediction effects of GEM, Hellinger Distance, L2 Distance and Wasserstein Distance
+To get the prediction results for GEM, Hellinger Distance, L2 Distance and Wasserstein Distance
 ```
 cd Application1/
 
