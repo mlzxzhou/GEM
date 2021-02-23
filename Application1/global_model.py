@@ -28,7 +28,6 @@ from dgckernel.keycoder import KeyCoder
 from dgckernel.hexcell import HexCellGenerator
 from dgckernel.dgcalculator import Calculator
 
-print(sys.path)
 date = DATE
 _T = 6  # 10 min
 _TD = 60  # 1 min
