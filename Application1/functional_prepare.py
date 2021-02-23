@@ -148,7 +148,7 @@ for i in range(21):
     ratio = metric_data['ratio'].T
     global_metric = metric_data['global_metric']
 
-    metric_w_dir = 'data/output/area5/area5_' + str(basetime) + '_metric1.npz'
+    metric_w_dir = 'data/output/area5/area5_' + str(basetime) + '_metric_1.npz'
     metric_w_data = np.load(metric_w_dir)
     global_metric_w = metric_w_data['global_metric_w']
 
