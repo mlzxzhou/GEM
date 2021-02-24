@@ -133,4 +133,4 @@ for j in range(_TN):
     metric[j] = global_transport(order_count_full[:,j], cur_driver_count[:, j], gridsKey, grids_to_id, 1, 0.4)
     print(j)
 
-np.savez('../data/output/area5/area5_{}_metric.npz'.format(date), metric=metric)
+np.savez('data/output/area5/area5_{}_metric.npz'.format(date), metric=metric)
