@@ -3,7 +3,7 @@
 Grid calculation algorithm test case
 
 Created by ZhangZhen on 16/9/14.
-Copyright © 2016年 didi. All rights reserved.
+Copyright © 2016 didi. All rights reserved.
 """
 
 from dgcalculator import Calculator
