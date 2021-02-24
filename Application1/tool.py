@@ -246,6 +246,3 @@ def dist_grid():
             eps, lat_dist, lng_dist, dist, lat_dist*1.0/lng_dist, lat_dist/eps, lng_dist/eps
         ))
 
-
-if __name__ == '__main__':
-    test()
